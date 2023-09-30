@@ -91,7 +91,7 @@ header ul li {
 header a {
     text-decoration: none;
     color: var(--text-title);
-
+    font-weight: 500;
 }
 
 
@@ -165,6 +165,19 @@ header a {
     background-color: rgb(236, 236, 236);
     padding: 15px;
     margin-top: 15px;
+}
+
+.meet-team a {
+    text-decoration: none;
+    color: var(--text-title);
+    transition: 1s;
+}
+
+.meet-team a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--text-highlight);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 
 /* -- Our expertise -- */
@@ -275,7 +288,21 @@ footer {
     header a {
         text-decoration: none;
         color: var(--text-title);
+        transition: 1s;
+    }
 
+    header a:hover {
+        text-decoration: underline;
+        color: var(--text-highlight);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 4px;
+    }
+
+    .nav-about li:nth-child(3) {
+        text-decoration: underline;
+        color: var(--text-highlight);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 4px;
     }
 
 
