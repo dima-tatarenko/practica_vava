@@ -8,6 +8,19 @@ medium - 500
 
 */
 
+/* -- Root vars -- */
+
+:root {
+    --text-base: rgb(146, 146, 146);
+    --text-title: rgb(50, 50, 50);
+    --text-highlight: rgb(143, 206, 149);
+
+    --font-normal: 300;
+    --font-bold: 500;
+}
+
+/* -- General -- */
+
 * {
     box-sizing: border-box;
 }
@@ -21,3 +34,111 @@ img {
     height: auto;
     display: block;
 }
+
+body {
+    font-family: 'Rasa', serif;
+    font-weight: var(--font-normal);
+    font-size: 18px;
+    color: var(--text-base)
+}
+
+.wrapper {
+    width: 100%;
+}
+
+section {
+    padding: 50px 0;
+}
+
+h2 {
+    font-size: 150%;
+    color: var(--text-title);
+    text-align: center;
+}
+
+h3 {
+    color: var(--text-title)
+}
+
+.disp-none {
+    display: none;
+}
+
+/* -- Nav menu -- */
+
+header {
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    background-color: palegoldenrod;
+}
+
+header div {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+header ul li {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--text-title);
+
+}
+
+
+/* -- Meet the team -- */
+
+.team-grid {
+    padding-top: 25px;
+    display: grid;
+    grid: auto-flow / 1fr;
+    justify-items: center;
+    text-align: center;
+}
+
+.diamond-pic {
+    width: 150px;
+    height: 150px;
+    rotate: 45deg;
+    position: relative;
+    background-color: gray;
+    overflow: hidden;
+    margin: 70px 0;
+}
+
+.diamond-pic img {
+    width: 200%;
+    top: -75px;
+    left: -75px;
+    rotate: -45deg;
+    position: absolute;
+    filter: grayscale(100%);
+    padding: 45px;
+}
+
+.team-grid figure p {
+    margin-top: 10px;
+}
+
+.team-grid figure p:nth-child(2) {
+    color: var(--text-title);
+}
+
+.team-grid figure p:nth-child(3) {
+    font-size: 80%;
+}
+
+
+/* -- General -- */
+
+
+/* -- General -- */
