@@ -224,3 +224,143 @@ footer {
     text-align: center;
     padding-bottom: 20px;
 }
+
+
+
+
+
+
+
+
+/* -- Desktop -- */
+
+@media (width >1200px) {
+
+    .wrapper {
+        width: 80%;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    h2 {
+        font-size: 200%;
+        text-align: left;
+    }
+
+    /* -- Nav menu -- */
+
+    header {
+        width: 100%;
+        padding: 25px 0px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    header div {
+        width: auto;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    header ul li {
+        display: inline-block;
+        width: auto;
+        text-align: left;
+        padding: 0px 20px;
+    }
+
+    header a {
+        text-decoration: none;
+        color: var(--text-title);
+
+    }
+
+
+    /* -- Meet the team -- */
+
+    .team-grid {
+        padding-top: 25px;
+        display: grid;
+        grid: auto-flow / 1fr 1fr 1fr 1fr;
+        row-gap: 2%;
+    }
+
+    .diamond-pic {
+        margin: 50px 0;
+    }
+
+    .diamond-pic:hover {
+        margin: 50px 0;
+
+    }
+
+    .meet-team>div:nth-child(3) {
+        padding: 50px 15px;
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    /* -- Our expertise -- */
+
+    .flex-expertise {
+        flex-direction: row;
+        text-align: center;
+        margin-top: 30px;
+        row-gap: 30px;
+    }
+
+    .flex-expertise article {
+        width: 33.333%;
+    }
+
+    .flex-expertise svg {
+        width: 20%;
+    }
+
+    .flex-expertise article p:nth-child(3) {
+        margin-top: 10px;
+    }
+
+
+    /* -- The way we work -- */
+
+    .our-ways .desktop {
+        display: block;
+    }
+
+    .our-ways .mobile {
+        display: none;
+    }
+
+    .our-ways nav {
+        margin: 20px 0;
+    }
+
+    .our-ways .desktop ul {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .our-ways .desktop ul li {
+        width: 20%;
+    }
+
+    .our-ways .desktop ul li:hover {
+        width: 20%;
+        border-bottom: solid;
+    }
+
+    .our-ways div p:not(:first-child) {
+        margin-top: 15px;
+    }
+
+    footer {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+}
