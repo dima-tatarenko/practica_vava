@@ -43,7 +43,8 @@ body {
 }
 
 .wrapper {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 section {
@@ -72,7 +73,6 @@ header {
     display: flex;
     justify-content: space-between;
     flex-direction: column-reverse;
-    background-color: palegoldenrod;
 }
 
 header div {
@@ -125,6 +125,29 @@ header a {
     padding: 45px;
 }
 
+.diamond-pic:hover {
+    width: 150px;
+    height: 150px;
+    rotate: 0deg;
+    position: relative;
+    background-color: gray;
+    overflow: hidden;
+    margin: 70px 0;
+    transition: 2s;
+}
+
+.diamond-pic:hover img {
+    width: 200%;
+    top: -75px;
+    left: -75px;
+    rotate: 0deg;
+    position: absolute;
+    filter: grayscale(100%);
+    padding: 45px;
+    filter: none;
+    transition: 2s;
+}
+
 .team-grid figure p {
     margin-top: 10px;
 }
@@ -137,8 +160,67 @@ header a {
     font-size: 80%;
 }
 
+.meet-team>div:nth-child(3) {
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+    padding: 15px;
+    margin-top: 15px;
+}
 
-/* -- General -- */
+/* -- Our expertise -- */
+
+.flex-expertise {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+
+.flex-expertise article {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.flex-expertise svg {
+    width: 30%;
+}
+
+.flex-expertise article p:nth-child(3) {
+    margin-top: 10px;
+}
 
 
-/* -- General -- */
+/* -- The way we work -- */
+
+.our-ways .desktop {
+    display: none;
+}
+
+.our-ways nav {
+    margin: 20px 0;
+}
+
+.our-ways .mobile ul {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.our-ways .mobile ul li {
+    width: 20%;
+}
+
+.our-ways .mobile ul li:first-child {
+    width: 20%;
+    border-bottom: solid;
+}
+
+.our-ways div p:not(:first-child) {
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 20px;
+}
