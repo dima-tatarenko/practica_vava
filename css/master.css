@@ -335,14 +335,14 @@ footer {
         text-underline-offset: 4px;
     }
 
-    .nav-index li:nth-child(2) {
+    .nav-index li:nth-child(1) {
         text-decoration: underline;
         color: var(--text-highlight);
         text-decoration-thickness: 2px;
         text-underline-offset: 4px;
     }
 
-    .nav-about li:nth-child(4) {
+    .nav-about li:nth-child(3) {
         text-decoration: underline;
         color: var(--text-highlight);
         text-decoration-thickness: 2px;
