@@ -156,6 +156,195 @@ main {
     padding-top: calc(var(--spacing) * 4);
 }
 
+
+
+/* inicio hero */
+
+.hero {
+    background-image: url(../images/fondo.png);
+    height: 80vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+
+}
+
+.hero h1 {
+    text-align: center;
+    font-size: 3em;
+    line-height: 1.4em;
+}
+
+
+
+/* inicio projects */
+
+/* estilos genericos de la seccion los hago atacando a section */
+
+#projects .grid {
+    display: grid;
+    gap: var(--space);
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-columns: 1fr;
+}
+
+#projects .grid article {
+    filter: grayscale(100%);
+    transition: 1s;
+
+    &:hover {
+        filter: grayscale(0%);
+    }
+}
+
+#projects .grid article:first-child {
+    background-image: url('../images/vase-wooden.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 45vh;
+    overflow: hidden;
+}
+
+#projects .grid article:last-child {
+    background-image: url('../images/coo-coo-clock.png');
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    /* mascara de recorte */
+}
+
+#projects .grid article:nth-child(2) {
+    background-image: url('../images/bottle-gradient-2.jpg');
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    /* mascara de recorte */
+}
+
+#projects .grid article {
+    position: relative;
+}
+
+#projects .grid article h3 {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 0.60rem;
+    font-size: 2rem;
+    font-weight: 500;
+    transition: 1s;
+    opacity: 0;
+}
+
+#projects .grid article:hover h3 {
+    left: 1.25rem;
+    opacity: 1;
+}
+
+#projects h2 {
+    font-size: 3em;
+    padding-bottom: 2.5rem;
+    text-align: center;
+}
+
+main .more a {
+    color: var(--text-title);
+    display: inline-block;
+    padding: 0.20rem 0rem;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-top: calc(var(--space)*3);
+    border-bottom: 1px solid var(--text-title);
+}
+
+
+/* fin projects */
+
+
+/* inicio de price */
+
+main #price .flex {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--space)*2);
+}
+
+main #price .flex article {
+    text-align: center;
+}
+
+main #price .flex article h3 {
+    font-size: 2em;
+}
+
+main #price .flex article .price {
+    font-size: 3em;
+    margin: var(--space) 0;
+}
+
+main #price .flex article hr {
+    border: 0.5px solid var(--text-title);
+    margin-bottom: var(--space);
+}
+
+main #price .flex article li {
+    margin-bottom: 0.625rem;
+    font-size: 1.5rem;
+
+    & span {
+        color: var(--text-title);
+    }
+}
+
+.buy {
+    background-color: var(--color-button);
+    display: inline-block;
+    padding: var(--space);
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--mainColor);
+    transition: 0.5s;
+
+    &:hover {
+        background-color: var(--text-title);
+    }
+}
+
+
+/* final de price */
+
+/* inicio de news */
+
+main #news .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space);
+}
+
+main #news .flex article a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-base);
+}
+
+main #news .flex article a p {
+    color: var(--text-title)
+}
+
+main #news .flex article a h3 {
+    font-size: 2rem;
+}
+
+
+
+/* final de news */
+
+
+
+
+
+
 /* -- Meet the team -- */
 
 .team-grid {
@@ -316,9 +505,90 @@ footer {
 
 
 
-/* -- Desktop -- */
+
+
+
+/* -- Tablet -- */
 
 @media (min-width: 47.5rem) {
+
+    /* -- Meet the team -- */
+
+    .team-grid {
+        padding-top: calc(var(--spacing) * 6);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-items: center;
+        text-align: center;
+        gap: 2.5rem 7.5rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .team-grid figure {
+        width: calc(50% - 7.5rem);
+    }
+
+    .diamond-pic {
+        transform: rotate(45deg);
+        overflow: hidden;
+        transition: 1.5s;
+    }
+
+    .diamond-pic img {
+        transform: rotate(-45deg) scale(2);
+        filter: grayscale(100%);
+        transition: 1.5s;
+    }
+
+    .team-grid figure p:nth-child(2) {
+        color: var(--text-title);
+        margin-top: calc(var(--spacing) * 3.5);
+    }
+
+    .meet-team>div:nth-child(3) {
+        width: 100%;
+        background-color: rgb(236, 236, 236);
+        margin-top: var(--spacing);
+    }
+
+
+
+    /* -- Our expertise -- */
+
+    .flex-expertise {
+        flex-direction: row;
+        margin-top: calc(var(--spacing) * 1.5);
+        row-gap: calc(var(--spacing) * 1.5);
+    }
+
+    .flex-expertise article {
+        width: calc(33.333% - calc(var(--spacing) * 1.5));
+        text-align: left;
+    }
+
+    .flex-expertise svg {
+        width: 25%;
+        margin-bottom: calc(var(--spacing) / 2);
+    }
+
+    .flex-expertise h3 {
+        font-size: 140%;
+    }
+
+
+}
+
+
+
+
+
+
+
+/* -- Laptop -- */
+
+@media(min-width: 62.5em) {
 
     .wrap {
         width: 90%;
@@ -405,32 +675,58 @@ footer {
         display: none;
     }
 
+
+    /* Juanan index */
+
+    .hero h1 {
+        max-width: var(--max-width);
+    }
+
+    #projects .grid {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #projects .grid article:last-child {
+        grid-column: 2;
+        grid-row: 1/3;
+    }
+
+    #price .flex {
+        flex-direction: row;
+    }
+
+    #price .flex article {
+        width: 100%;
+        text-align: left;
+    }
+
+    #price section h2 {
+        text-align: left;
+    }
+
+    #news article {
+        width: calc(50%);
+    }
+
+    #news article figure {
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+
+
+
+
+
     /* -- Meet the team -- */
 
     .team-grid {
-        padding-top: calc(var(--spacing) * 6);
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-items: center;
-        text-align: center;
-        gap: 2.5rem 7.5rem;
+        width: 100%;
     }
 
     .team-grid figure {
         width: calc(25% - 7.5rem);
-    }
-
-    .diamond-pic {
-        transform: rotate(45deg);
-        overflow: hidden;
-        transition: 1.5s;
-    }
-
-    .diamond-pic img {
-        transform: rotate(-45deg) scale(2);
-        filter: grayscale(100%);
-        transition: 1.5s;
     }
 
     .diamond-pic:hover {
@@ -445,17 +741,6 @@ footer {
         transition: 1.5s;
     }
 
-    .team-grid figure p:nth-child(2) {
-        color: var(--text-title);
-        margin-top: calc(var(--spacing) * 3.5);
-    }
-
-    .meet-team>div:nth-child(3) {
-        width: 100%;
-        background-color: rgb(236, 236, 236);
-        margin-top: var(--spacing);
-    }
-
     .meet-team a:hover {
         text-decoration: underline;
         text-decoration-color: var(--text-highlight);
@@ -464,29 +749,12 @@ footer {
     }
 
 
-
-
     /* -- Our expertise -- */
-
-    .flex-expertise {
-        flex-direction: row;
-        margin-top: calc(var(--spacing) * 1.5);
-        row-gap: calc(var(--spacing) * 1.5);
-    }
-
-    .flex-expertise article {
-        width: calc(33.333% - calc(var(--spacing) * 1.5));
-        text-align: left;
-    }
 
     .flex-expertise svg {
         width: 15%;
-        margin-bottom: calc(var(--spacing) / 2);
     }
 
-    .flex-expertise h3 {
-        font-size: 140%;
-    }
 
     /* -- The way we work -- */
 
@@ -512,3 +780,9 @@ footer {
     }
 
 }
+
+
+
+/* -- Desktop -- */
+
+/* @media(min-width: 87.5rem) {} */
