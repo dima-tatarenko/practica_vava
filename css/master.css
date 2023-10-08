@@ -8,6 +8,32 @@ medium - 500
 
 */
 
+@keyframes grayEffect {
+    0% {
+        filter: grayscale(100%)
+    }
+
+    20% {
+        filter: grayscale(80%)
+    }
+
+    40% {
+        filter: grayscale(60%)
+    }
+
+    60% {
+        filter: grayscale(40%)
+    }
+
+    80% {
+        filter: grayscale(20%)
+    }
+
+    100% {
+        filter: grayscale(0%)
+    }
+}
+
 /* -- Root vars -- */
 
 :root {
@@ -42,7 +68,7 @@ img {
 }
 
 img:hover {
-    filter: grayscale(0);
+    animation: grayEffect 1.5s;
 }
 
 body {
@@ -367,11 +393,13 @@ footer {
     .diamond-pic {
         transform: rotate(45deg);
         overflow: hidden;
+        transition: 1.5s;
     }
 
     .diamond-pic img {
         transform: rotate(-45deg) scale(2);
         filter: grayscale(100%);
+        transition: 1.5s;
     }
 
     .diamond-pic:hover {
