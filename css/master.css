@@ -248,29 +248,60 @@ main {
 
 .our-ways nav {
     margin: var(--spacing) 0;
-    font-size: 120%;
-    font-weight: var(--font-bold);
-    color: var(--text-title);
 }
 
-.our-ways .mobile ul {
+.our-ways nav ul {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
 }
 
-.our-ways .mobile ul li {
+.our-ways nav ul li {
     width: 20%;
-    transition: 1s;
+    padding: 5px 0;
 }
 
-.our-ways .mobile ul li:first-child {
+.our-ways nav ul li:first-child {
     width: 20%;
     border-bottom: solid;
 }
 
 .our-ways div p:not(:first-child) {
     margin-top: var(--spacing);
+}
+
+.our-ways nav a {
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: var(--font-bold);
+    color: var(--text-title);
+}
+
+.our-ways nav a:hover {
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: var(--font-bold);
+    color: var(--text-title);
+}
+
+#discover {
+    display: block;
+}
+
+#analyse {
+    display: none;
+}
+
+#improve {
+    display: none;
+}
+
+#measure {
+    display: none;
+}
+
+#control {
+    display: none;
 }
 
 footer {
@@ -469,22 +500,6 @@ footer {
 
     .our-ways nav {
         margin: calc(var(--spacing) * 1.5) 0;
-    }
-
-    .our-ways .desktop ul {
-        display: flex;
-        flex-wrap: wrap;
-        text-align: center;
-    }
-
-    .our-ways .desktop ul li {
-        width: 20%;
-        transition: 1s;
-    }
-
-    .our-ways .desktop ul li:hover {
-        width: 20%;
-        border-bottom: solid;
     }
 
     .our-ways div p:not(:first-child) {
